@@ -1,0 +1,26 @@
+<p>listado works!</p>
+
+<!-- //Mae rata esto quiere decir que heroeBorrado es true es muy facil,
+HeroeBorrado es un inicio es true PORQUE LA PICHA ESTÁ VACIA, de lo contrario
+es decir QUE NO ESTÁ VACIA que se muestre el ng-template con el #noBorrado 
+muy facil, manda huevo que no entienda hp-->
+<div *ngIf="HeroeBorrado;
+
+else noBorrado ">
+  <h3>Heroes borrados</h3>
+  <span>{{ HeroeBorrado }}</span>
+</div>
+<!--  ng-template no se muestra directamente
+ -->
+<ng-template #noBorrado>
+  <h3>No ha borrado nada</h3>
+</ng-template>
+
+
+<button (click)="borrarHeroe()">Borrar Heroe</button>
+
+<button (click)="borrarHeroe()">Borrar Heroe</button>
+
+<ul>
+  <li *ngFor="let heroe of Heroes; let i = index">{{ i + 1 }} - {{ heroe }}</li>
+</ul>
